@@ -49,7 +49,22 @@ let difference = arr1
 ##### a. Using ES6
 
 ```js
-const results = arrayOne.filter(({ value: id1 }) => !arrayTwo.some(({ value: id2 }) => id2 === id1));
+const arrayOne = [ 
+  { nodeId: "0001", state: "published" },
+  { nodeId: "0002", state: "published" },
+  { nodeId: "0003", state: "draft" },
+  { nodeId: "0004", state: "archieved" },
+  { nodeId: "0005", state: "Ryan" },
+];
+          
+const arrayTwo = [
+  { nodeId: "0001", state: "published"},
+  { nodeId: "0002", state: "published"},
+  { nodeId: "0003", state: "draft"},
+  { nodeId: "0004", state: "archieved"},
+];
+
+const results = arrayOne.filter(({ nodeId: id1 }) => !arrayTwo.some(({ nodeId: id2 }) => id2 === id1));
 
 console.log(results);
 ```

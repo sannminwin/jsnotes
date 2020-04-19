@@ -69,3 +69,58 @@ const results = arrayOne.filter(({ nodeId: id1 }) => !arrayTwo.some(({ nodeId: i
 console.log(results);
 ```
 
+#### 4. Sort array of object numerically by value of a property
+
+##### a. Vanilla JS
+
+```js
+const deliveryRate = [
+    {
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75201",
+        "price": "162500"
+    }, {
+        "city": "Bevery Hills",
+        "state": "CA",
+        "zip": "90210",
+        "price": "319250"
+    }, {
+        "city": "New York",
+        "state": "NY",
+        "zip": "00010",
+        "price": "962500"
+    }
+];
+
+deliveryRate.sort(function(a, b) {
+    return parseFloat(a.price) - parseFloat(b.price);
+});
+
+```
+
+##### a. ES6 Version
+
+```js
+const deliveryRate = [
+    {
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75201",
+        "price": "162500"
+    }, {
+        "city": "Bevery Hills",
+        "state": "CA",
+        "zip": "90210",
+        "price": "319250"
+    }, {
+        "city": "New York",
+        "state": "NY",
+        "zip": "00010",
+        "price": "962500"
+    }
+];
+
+deliveryRate.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+
+```

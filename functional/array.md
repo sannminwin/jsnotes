@@ -54,7 +54,7 @@ const arrayOne = [
   { nodeId: "0002", state: "published" },
   { nodeId: "0003", state: "draft" },
   { nodeId: "0004", state: "archieved" },
-  { nodeId: "0005", state: "Ryan" },
+  { nodeId: "0005", state: "wait_for_review" },
 ];
           
 const arrayTwo = [

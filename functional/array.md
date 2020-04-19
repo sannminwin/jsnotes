@@ -45,3 +45,12 @@ let difference = arr1
     .concat(arr2.filter(x => !arr1.includes(x)));
 ```
 
+#### 3. Find difference between two object arrays
+##### a. Using ES6
+
+```js
+const results = arrayOne.filter(({ value: id1 }) => !arrayTwo.some(({ value: id2 }) => id2 === id1));
+
+console.log(results);
+```
+
